@@ -9,30 +9,30 @@ const About = () => {
     <>
       <Navbar />
       {/* About Section */}
-      <section id="about" className="section-padding bg-white dark:bg-gray-800">
+      <section id="about" className="section-padding hero-bg">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-center text-gray-900 dark:text-white mb-12 animate-fade-in-up">
+            <h2 className="text-center mb-6 animate-fade-in-up">
               About Me
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Profile Photo Section */}
               <div className="animate-fade-in-left">
-                <div className="mb-8">
+                <div className="relative w-64 h-64 mx-auto mb-8">
                   <img
-                    src="/assets/ravi-pandit-profile.png"
+                    src="/assets/ravi-pandit.png"
                     alt="Ravi Pandit"
-                    className="w-64 h-64 mx-auto rounded-full object-cover shadow-xl border-4 border-gray-200 dark:border-gray-600 transition-transform duration-300 hover:scale-105"
+                    className="image-container"
                   />
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                <p className="bg-background text-foreground mb-6">
                   I'm a passionate computer engineer with expertise in Java
                   development and artificial intelligence. My journey in
                   technology spans from building robust backend systems to
                   developing intelligent solutions using machine learning and
                   natural language processing.
                 </p>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                <p className="bg-background text-foreground mb-6">
                   With a strong foundation in software engineering principles
                   and a keen interest in AI/ML, I enjoy solving complex problems
                   and creating innovative solutions that make a real impact.
@@ -40,40 +40,38 @@ const About = () => {
                 <div className="flex gap-4">
                   <a
                     href="https://github.com/ravix2001"
-                    className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                   >
-                    <Github className="w-6 h-6" />
+                    <Github className="w-7 h-7" />
                   </a>
                   <a
                     href="https://linkedin.com/in/ravipandit2001"
-                    className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                   >
-                    <Linkedin className="w-6 h-6" />
+                    <Linkedin className="w-7 h-7" />
                   </a>
                 </div>
               </div>
               <div className="space-y-4 animate-fade-in-right">
                 <div className="flex items-center gap-3">
-                  <Award className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <Award className="w-5 h-5" />
+                  <span>
                     Computer Engineering Degree
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Code className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <Code className="w-5 h-5" />
+                  <span>
                     2+ Years Java Development
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Brain className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <Brain className="w-5 h-5" />
+                  <span>
                     AI/ML Enthusiast
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <BookOpen className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <BookOpen className="w-5 h-5" />
+                  <span>
                     NLP Practitioner
                   </span>
                 </div>

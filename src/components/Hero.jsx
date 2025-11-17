@@ -17,27 +17,27 @@ const Hero = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="pt-24 pb-16 md:pt-32 md:pb-24 animate-fade-in"
+        className="section-padding animate-fade-in"
       >
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
             {/* Profile Photo */}
-            <div className="mb-4 animate-fade-in">
+            <div className="mb-6 animate-fade-in">
               <div className="relative w-48 h-48 mx-auto mb-4">
                 <img
-                  src="/assets/ravi-pandit-profile.png"
+                  src="/assets/ravi-pandit.png"
                   alt="Ravi Pandit"
-                  className="w-full h-full rounded-full object-cover shadow-lg ring-4 ring-gray-200 dark:ring-gray-700 transition-transform duration-300 hover:scale-105"
+                  className="image-container"
                 />
                 {/* <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20"></div> */}
               </div>
             </div>
             {/* Text */}
-            <h1 className="text-gray-900 dark:text-white mb-6 animate-slide-up">
+            <h1 className="mb-6 animate-slide-up">
               Computer Engineer & <br />
               Java Developer
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto animate-slide-up animation-delay-200">
+            <p className="text-xl mb-8 max-w-2xl mx-auto animate-slide-up animation-delay-200">
               Passionate about building scalable Java applications and
               intelligent systems using machine learning and natural language
               processing.
@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up animation-delay-400">
               <button
                 onClick={() => scrollToSection("contact")}
-                className="inline-flex items-center justify-center rounded-md bg-gray-900 dark:bg-gray-100 px-6 py-3 text-sm font-medium text-white dark:text-gray-900 shadow-sm transition-colors hover:bg-gray-800 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-gray-400"
+                className="btn-primary"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Get In Touch
@@ -53,7 +53,7 @@ const Hero = () => {
               <a
                 href="/assets/resume.pdf"
                 download="Ravi_Pandit_Resume.pdf"
-                className="btn-secondary-dark"
+                className="btn-secondary"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume

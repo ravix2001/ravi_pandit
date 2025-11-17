@@ -31,7 +31,7 @@ const Experience = () => {
       {/* Experience Section */}
       <section
         id="experience"
-        className="section-padding bg-white dark:bg-gray-800"
+        className="section-padding"
       >
         <div className="container-custom">
           <h2 className="text-center text-gray-900 dark:text-white mb-12 animate-fade-in-up">

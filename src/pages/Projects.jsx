@@ -40,31 +40,31 @@ const Projects = () => {
       {/* Projects Section */}
       <section
         id="projects"
-        className="section-padding bg-gray-50 dark:bg-gray-900"
+        className="section-padding hero-bg"
       >
         <div className="container-custom">
-          <h2 className="text-center text-gray-900 dark:text-white mb-12 animate-fade-in-up">
+          <h2 className="text-center mb-12 animate-fade-in-up">
             Featured Projects
           </h2>
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-wrap gap-8">
               {projects.map((project, index) => (
                 <div
                   key={project.id}
-                  className="card-dark hover:scale-105 transition-transform duration-300 animate-fade-in-up"
+                  className="card hover:scale-105 transition-transform duration-300 animate-fade-in-up"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <h3 className="text-gray-900 dark:text-white mb-3">
+                  <h3 className="mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-muted mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-sm"
+                        className="tech"
                       >
                         {tech}
                       </span>
@@ -73,15 +73,13 @@ const Projects = () => {
                   <div className="flex gap-3">
                     <a
                       href={project.github}
-                      className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-6 h-6" />
                     </a>
                     <a
                       href={project.demo}
-                      className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                     >
-                      <ExternalLink className="w-5 h-5" />
+                      <ExternalLink className="w-6 h-6" />
                     </a>
                   </div>
                 </div>
