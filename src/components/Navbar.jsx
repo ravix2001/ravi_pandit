@@ -33,14 +33,9 @@ const Navbar = () => {
         // document.body.style.backgroundColor = "#1e293b"; // gray-800
         document.body.style.color = "#f8fafc"; // gray-50
 
-        // GetInTouch styles for dark mode
-        document.querySelectorAll(".get-in-touch").forEach((touch) => {
-          touch.style.backgroundColor = "#1e2838"; // gray-400
-        });
-
         // Hero-bg for dark mode
-        document.querySelectorAll(".hero-bg").forEach((touch) => {
-          touch.style.backgroundColor = "#1e293b"; // gray-800
+        document.querySelectorAll(".hero-bg").forEach((hero) => {
+          hero.style.backgroundColor = "#1e293b"; // gray-800
         });
 
         // Text for dark mode
@@ -80,15 +75,10 @@ const Navbar = () => {
         // document.body.style.backgroundColor = "#f1f5f9"; // gray-100
         document.body.style.color = "#0f172a"; // gray-900
 
-        // GetInTouch styles for light mode
-        document.querySelectorAll(".get-in-touch").forEach((touch) => {
-          touch.style.backgroundColor = "#e2e8f0"; // gray-200
-        });
-
         // Hero-bg for light mode
-        document.querySelectorAll(".hero-bg").forEach((touch) => {
-          // touch.style.backgroundColor = "#e2e8f0"; // gray-200
-          touch.style.backgroundColor = "#f1f5f9"; // gray-100
+        document.querySelectorAll(".hero-bg").forEach((hero) => {
+          // hero.style.backgroundColor = "#e2e8f0"; // gray-200
+          hero.style.backgroundColor = "#f1f5f9"; // gray-100
         });
 
         // Text for light mode

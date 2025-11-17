@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 const GetInTouch = () => {
   return (
-    <section id="contact" className="section-padding get-in-touch">
+    <section id="contact" className="section-padding hero-bg">
       <div className="container-custom">
         <h2 className="text-center mb-12">
           Get In Touch
