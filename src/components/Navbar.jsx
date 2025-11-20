@@ -113,7 +113,7 @@ const Navbar = () => {
           card.style.color = "#0f172a";
           card.style.border = "1px solid #cbd5e1";
         });
-        
+
         // Tech for light mode
         document.querySelectorAll(".tech").forEach((tech) => {
           tech.style.backgroundColor = "#e5e7eb";
@@ -197,7 +197,7 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* Mobile Navigation */}
+            {/* Dark Mode Navigation */}
             <div className="md:hidden flex items-center gap-4">
               <button
                 type="button"
@@ -221,7 +221,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="p-2 rounded-md transition-colors"
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (
@@ -235,42 +235,51 @@ const Navbar = () => {
 
           {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
-            <div className="md:hidden absolute top-full left-40 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg animate-slide-down">
-              <div className="flex flex-col  pr-12 py-4">
+            <div
+              className={`md:hidden absolute top-full right-0 shadow-lg animate-slide-down menu ${
+                darkMode
+                  ? "bg-[#334155] text-[#f8fafc]"
+                  : "bg-[#f8fafc] text-[#0f172a]"
+              } `}
+            >
+              <div className="flex flex-col px-5">
                 <Link
                   to="/"
-                  className="px-4 py-3 text-left text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className={`px-4 py-3 text-left border-b ${
+                    darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
+                  }`}
                 >
                   Home
                 </Link>
+
                 <Link
                   to="/about"
-                  className="px-4 py-3 text-left text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className={`px-4 py-3 text-left border-b ${
+                    darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
+                  }`}
                 >
                   About
                 </Link>
+
                 <Link
                   to="/skills"
-                  className="px-4 py-3 text-left text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className={`px-4 py-3 text-left border-b ${
+                    darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
+                  }`}
                 >
                   Skills
                 </Link>
-                {/* <Link
-                    to="/experience"
-                  className="px-4 py-3 text-left text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                >
-                  Experience
-                </Link> */}
+
                 <Link
                   to="/projects"
-                  className="px-4 py-3 text-left text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className={`px-4 py-3 text-left border-b ${
+                    darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
+                  }`}
                 >
                   Projects
                 </Link>
-                <Link
-                  to="/contact"
-                  className="px-4 py-3 text-left text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                >
+
+                <Link to="/contact" className="px-4 py-3 text-left">
                   Contact
                 </Link>
               </div>

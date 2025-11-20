@@ -25,14 +25,14 @@ const About = () => {
                     className="image-container"
                   />
                 </div>
-                <p className="bg-background text-foreground mb-6">
+                <p className="mb-6">
                   I'm a passionate computer engineer with expertise in Java
                   development and artificial intelligence. My journey in
                   technology spans from building robust backend systems to
                   developing intelligent solutions using machine learning and
                   natural language processing.
                 </p>
-                <p className="bg-background text-foreground mb-6">
+                <p className="mb-6">
                   With a strong foundation in software engineering principles
                   and a keen interest in AI/ML, I enjoy solving complex problems
                   and creating innovative solutions that make a real impact.
