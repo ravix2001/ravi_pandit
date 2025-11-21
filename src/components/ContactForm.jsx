@@ -83,12 +83,13 @@ const ContactForm = () => {
               </p>
               <div className="space-y-4">
                 <a
-                  href="mailto:ravipandit.devmail@gmail.com"
+                  href="mailto:contact@ravi-pandit.com.np"
                   className="flex items-center"
                 >
                   <Mail className="w-6 h-6 bg-background text-foreground mr-4" />
                   <span>
-                    ravipandit.devmail@gmail.com
+                    {/* ravipandit.devmail@gmail.com */}
+                    contact@ravi-pandit.com.np
                   </span>
                 </a>
                 <a href="tel:+9779825335399" className="flex items-center">

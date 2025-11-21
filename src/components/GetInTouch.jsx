@@ -14,11 +14,12 @@ const GetInTouch = () => {
             enthusiasts.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
-            <a href="mailto:ravipandit.devmail@gmail.com">
+            <a href="mailto:contact@ravi-pandit.com.np">
               <div className="flex flex-col items-center">
                 <Mail className="w-8 h-8 bg-background text-foreground mb-2" />
                 <span className="bg-background text-foreground">
-                  ravipandit.devmail@gmail.com
+                  {/* ravipandit.devmail@gmail.com */}
+                  contact@ravi-pandit.com.np
                 </span>
               </div>
             </a>
