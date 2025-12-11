@@ -6,22 +6,22 @@ import { Building, Calendar } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      id: "senior-java",
-      title: "Senior Java Developer",
-      company: "Tech Company",
-      period: "2022 - Present",
+      id: "junior-java",
+      title: "Junior Java Developer",
+      company: "Restobrain, Darwin, Northern Territory, Australia - Remote",
+      period: "Dec 2025 - Present",
       description:
-        "Lead development of microservices architecture using Spring Boot. Implemented ML models for data processing and NLP solutions for customer service automation.",
-      technologies: ["Java", "Spring Boot", "Python", "ML", "NLP"],
+        "Responsible for developing and enhancing REST APIs using Spring Boot, improving system performance, and ensuring code reliability through debugging and testing. Working on optimizing database queries, fixing complex issues, and contributing to scalable module designs. Following clean code practices and continuing to learn advanced backend patterns, implement efficient solutions, and contribute to production-grade improvements at Restobrain.",
+      technologies: ["Java", "Springboot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
     },
     {
-      id: "software-engineer",
-      title: "Software Engineer",
-      company: "Previous Company",
-      period: "2020 - 2022",
+      id: "java-trainee",
+      title: "Java Trainee",
+      company: "Restobrain, Darwin, Northern Territory, Australia - Remote",
+      period: "Sep 2025 - Dec 2025",
       description:
-        "Developed enterprise applications and worked on AI/ML projects for data analysis and predictive modeling.",
-      technologies: ["Java", "Python", "TensorFlow", "SQL"],
+        "Built and integrated REST APIs using Spring Boot. Fixed critical bugs, handled edge cases, and improved application stability. Performed query optimization, refactoring, and code clean-ups for better performance. Collaborated in debugging complex problems involving multiple services. Thankful to my mentors, seniors, and teammates for guiding me through code reviews, best practices, and real-world scenarios. Your support helped me grow faster and better.",
+      technologies: ["Java", "Springboot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
     },
   ];
 
@@ -31,10 +31,10 @@ const Experience = () => {
       {/* Experience Section */}
       <section
         id="experience"
-        className="section-padding"
+        className="section-padding hero-bg"
       >
         <div className="container-custom">
-          <h2 className="text-center text-gray-900 dark:text-white mb-12 animate-fade-in-up">
+          <h2 className="text-center mb-12 animate-fade-in-up">
             Professional Experience
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -42,32 +42,32 @@ const Experience = () => {
               {experiences.map((exp, index) => (
                 <div
                   key={exp.id}
-                  className="card-dark animate-fade-in-up"
+                  className="card hover:scale-105 transition-transform duration-300 animate-fade-in-up"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-gray-900 dark:text-white mb-1">
+                      <h3 className="mb-1">
                         {exp.title}
                       </h3>
-                      <div className="flex items-center text-gray-700 dark:text-gray-300 mb-2">
+                      <div className="flex items-center mb-2">
                         <Building className="w-4 h-4 mr-2" />
                         {exp.company}
                       </div>
                     </div>
-                    <div className="flex items-center text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center">
                       <Calendar className="w-4 h-4 mr-2" />
                       {exp.period}
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="mb-4">
                     {exp.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
+                        className="tech"
                       >
                         {tech}
                       </span>
