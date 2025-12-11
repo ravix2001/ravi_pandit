@@ -57,7 +57,7 @@ const Projects = () => {
                   <h3 className="mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-muted mb-4">
+                  <p className="mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
