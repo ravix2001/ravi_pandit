@@ -232,16 +232,16 @@ const Navbar = () => {
           {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
             <div
-              className={`md:hidden absolute top-full right-0 shadow-lg animate-slide-down menu ${
+              className={`md:hidden absolute top-full w-36 right-0 shadow-lg animate-slide-down menu ${
                 darkMode
                   ? "bg-[#334155] text-[#f8fafc]"
                   : "bg-[#f8fafc] text-[#0f172a]"
               } `}
             >
-              <div className="flex flex-col px-5">
+              <div className="flex flex-col px-4">
                 <Link
                   to="/"
-                  className={`px-4 py-3 text-left border-b ${
+                  className={`px-2 py-3 text-left border-b ${
                     darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
                   }`}
                 >
@@ -250,7 +250,7 @@ const Navbar = () => {
 
                 <Link
                   to="/about"
-                  className={`px-4 py-3 text-left border-b ${
+                  className={`px-2 py-3 text-left border-b ${
                     darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
                   }`}
                 >
@@ -259,7 +259,7 @@ const Navbar = () => {
 
                 <Link
                   to="/skills"
-                  className={`px-4 py-3 text-left border-b ${
+                  className={`px-2 py-3 text-left border-b ${
                     darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
                   }`}
                 >
@@ -267,15 +267,24 @@ const Navbar = () => {
                 </Link>
 
                 <Link
+                  to="/experience"
+                  className={`px-2 py-3 text-left border-b ${
+                    darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
+                  }`}
+                >
+                  Experience
+                </Link>
+
+                <Link
                   to="/projects"
-                  className={`px-4 py-3 text-left border-b ${
+                  className={`px-2 py-3 text-left border-b ${
                     darkMode ? "border-[#1e293b]" : "border-[#cbd5e1]"
                   }`}
                 >
                   Projects
                 </Link>
 
-                <Link to="/contact" className="px-4 py-3 text-left">
+                <Link to="/contact" className="px-2 py-3 text-left">
                   Contact
                 </Link>
               </div>
