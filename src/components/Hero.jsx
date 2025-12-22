@@ -51,8 +51,8 @@ const Hero = () => {
                 Get In Touch
               </button>
               <a
-                href="/assets/resume.pdf"
-                download="Ravi_Pandit_Resume.pdf"
+                href="/assets/Ravi_Pandit.pdf"
+                download="Ravi_Pandit.pdf"
                 className="btn-secondary"
               >
                 <Download className="w-4 h-4 mr-2" />
