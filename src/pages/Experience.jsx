@@ -50,13 +50,13 @@ const Experience = () => {
                       <h3 className="mb-1">
                         {exp.title}
                       </h3>
-                      <div className="flex items-center mb-2">
-                        <Building className="w-4 h-4 mr-2" />
+                      <div className="flex items-start mb-2">
+                        <Building className="w-4 h-4 mr-2 flex-shrink-0 mt-1" />
                         {exp.company}
                       </div>
                     </div>
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
+                    <div className="flex items-start">
+                      <Calendar className="w-4 h-4 mr-2 flex-shrink-0 mt-1" />
                       {exp.period}
                     </div>
                   </div>
