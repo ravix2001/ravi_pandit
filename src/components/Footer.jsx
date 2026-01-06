@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="container-custom mt-2">
           <div className="text-center">
             <p>
-              © 2025 Ravi Pandit. All rights reserved.
+              © 2026 Ravi Pandit. All rights reserved.
             </p>
           </div>
         </div>
