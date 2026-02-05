@@ -26,6 +26,7 @@ import {
   FlaskConical,
   Sparkles,
   Power,
+  Rocket,
 } from "lucide-react";
 
 const Skills = () => {
@@ -85,6 +86,7 @@ const Skills = () => {
         { name: "Maven", icon: Package },
         { name: "JUnit", icon: Shield },
         { name: "Mockito", icon: FlaskConical },
+        { name: "Postman", icon: Rocket },
       ],
     },
     {
