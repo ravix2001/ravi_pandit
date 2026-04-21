@@ -123,7 +123,7 @@ const Skills = () => {
             {skillCategories.map((category, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl card shadow skill-card-hover animate-fade-in-up"
+                className="p-6 rounded-xl card shadow skill-card-hover hover:scale-102 transition-transform duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="flex items-center mb-4">

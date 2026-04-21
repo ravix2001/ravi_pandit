@@ -42,7 +42,7 @@ const Experience = () => {
               {experiences.map((exp, index) => (
                 <div
                   key={exp.id}
-                  className="card hover:scale-105 transition-transform duration-300 animate-fade-in-up"
+                  className="card hover:scale-101 transition-transform duration-300 animate-fade-in-up"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">

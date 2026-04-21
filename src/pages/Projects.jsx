@@ -51,7 +51,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <div
                   key={project.id}
-                  className="card hover:scale-105 transition-transform duration-300 animate-fade-in-up"
+                  className="card hover:scale-101 transition-transform duration-300 animate-fade-in-up"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <h3 className="mb-3">
