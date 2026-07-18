@@ -72,7 +72,7 @@ const Skills = () => {
         { name: "Python", icon: FileCode2 },
         { name: "PostgreSQL", icon: Database },
         { name: "MySQL", icon: Database },
-        { name: "MongoDB", icon: Leaf },
+        { name: "Redis", icon: Database },
         { name: "REST APIs", icon: Globe },
       ],
     },
