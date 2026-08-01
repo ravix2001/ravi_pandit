@@ -13,7 +13,7 @@ const GetInTouch = () => {
             on projects, or simply connecting with fellow developers and AI
             enthusiasts.
           </p>
-          <div className="grid sm:grid-cols-3 gap-6 mb-8">
+          <div className="grid sm:grid-cols-2 gap-6 mb-8">
             <a href="mailto:contact@ravi-pandit.com.np">
               <div className="flex flex-col items-center">
                 <Mail className="w-8 h-8 bg-background text-foreground mb-2" />
@@ -23,14 +23,14 @@ const GetInTouch = () => {
                 </span>
               </div>
             </a>
-            <a href="tel:+9779825335399">
+            {/* <a href="tel:+9779825335399">
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 bg-background text-foreground mb-2" />
                 <span className="bg-background text-foreground">
                   +977 9825335399
                 </span>
               </div>
-            </a>
+            </a> */}
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 bg-background text-foreground mb-2" />
               <span className="bg-background text-foreground">

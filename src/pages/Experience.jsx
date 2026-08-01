@@ -11,8 +11,8 @@ const Experience = () => {
       company: "Restobrain, Darwin, Northern Territory, Australia - Remote",
       period: "Dec 2025 - Present",
       description:
-        "Responsible for developing and enhancing REST APIs using Spring Boot, improving system performance, and ensuring code reliability through debugging and testing. Working on optimizing database queries, fixing complex issues, and contributing to scalable module designs. Following clean code practices and continuing to learn advanced backend patterns, implement efficient solutions, and contribute to production-grade improvements at Restobrain.",
-      technologies: ["Java", "Springboot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
+        "Developing and enhancing RESTful APIs using Spring Boot for scalable backend services. Implemented database indexing and query optimization techniques that improved query execution time and overall backend performance. Diagnosed and resolved production issues across multiple backend modules, improving application stability. Continuing to follow clean code practices, learn advanced backend patterns, and contribute to production-grade improvements.",
+      technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
     },
     {
       id: "java-trainee",
@@ -20,8 +20,8 @@ const Experience = () => {
       company: "Restobrain, Darwin, Northern Territory, Australia - Remote",
       period: "Sep 2025 - Dec 2025",
       description:
-        "Built and integrated REST APIs using Spring Boot. Fixed critical bugs, handled edge cases, and improved application stability. Performed query optimization, refactoring, and code clean-ups for better performance. Collaborated in debugging complex problems involving multiple services. Thankful to my mentors, seniors, and teammates for guiding me through code reviews, best practices, and real-world scenarios. Your support helped me grow faster and better.",
-      technologies: ["Java", "Springboot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
+        "Built and integrated REST APIs using Spring Boot. Fixed critical bugs, handled edge cases, and improved application stability. Optimized queries and refactored backend code for better performance, and collaborated on debugging complex issues spanning multiple services. Thankful to my mentors, seniors, and teammates for guiding me through code reviews, best practices, and real-world scenarios that helped me grow faster and better.",
+      technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
     },
   ];
 
@@ -45,7 +45,7 @@ const Experience = () => {
                   className="card hover:scale-101 transition-transform duration-300 animate-fade-in-up"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                     <div>
                       <h3 className="mb-1">
                         {exp.title}
@@ -60,7 +60,7 @@ const Experience = () => {
                       {exp.period}
                     </div>
                   </div>
-                  <p className="mb-4">
+                  <p class="text-sm sm:text-sm md:text-base mb-4">
                     {exp.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
