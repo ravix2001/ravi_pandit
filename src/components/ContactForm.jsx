@@ -92,12 +92,12 @@ const ContactForm = () => {
                     contact@ravi-pandit.com.np
                   </span>
                 </a>
-                <a href="tel:+9779825335399" className="flex items-center">
+                {/* <a href="tel:+9779825335399" className="flex items-center">
                   <Phone className="w-6 h-6 mr-4" />
                   <span>
                     +977 9825335399
                   </span>
-                </a>
+                </a> */}
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 mr-4" />
                   <span>
