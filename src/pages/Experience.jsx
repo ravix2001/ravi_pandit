@@ -15,10 +15,10 @@ const Experience = () => {
       technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
     },
     {
-      id: "java-trainee",
-      title: "Java Trainee",
+      id: "java-intern",
+      title: "Java Intern",
       company: "Restobrain, Darwin, Northern Territory, Australia - Remote",
-      period: "Sep 2025 - Dec 2025",
+      period: "Sep 2025 - Nov 2025",
       description:
         "Built and integrated REST APIs using Spring Boot. Fixed critical bugs, handled edge cases, and improved application stability. Optimized queries and refactored backend code for better performance, and collaborated on debugging complex issues spanning multiple services. Thankful to my mentors, seniors, and teammates for guiding me through code reviews, best practices, and real-world scenarios that helped me grow faster and better.",
       technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Bitbucket", "Postman API", "JavaScript"],
