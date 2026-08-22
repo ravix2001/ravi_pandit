@@ -1,266 +1,166 @@
 @import "tailwindcss";
 
-/* Light mode variables */
+/*
+  Design direction: a working engineering drawing set, not a screen-native "dev portfolio."
+  Light mode ("paper") reads as cream drafting paper with indigo ink and copper redline
+  annotations — like a printed sheet pulled from a drawing set.
+  Dark mode ("blueprint") reads as an actual blueprint: deep Prussian-blue ground with
+  white linework — the same drawing, under the lamp, before it was printed.
+  The signature element is the title block: every page and every project card carries one,
+  the way a real engineering sheet does (drawing no. / scale / rev / drafted by).
+*/
+
+/*
+  Design direction: a working engineering drawing set, not a screen-native "dev portfolio."
+  Light mode reads as a cool blue drafting sheet with deep navy ink and a blue-to-violet
+  accent. Dark mode reads as a near-black blueprint ground with the same accent, brighter,
+  against white linework. The signature element is the title block: every page and every
+  project card carries one, the way a real engineering sheet does (drawing no. / scale /
+  rev / drafted by).
+*/
+
 :root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --primary: 240 5.9% 10%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
+  --bg: #eaf3fc;
+  --bg-grid: rgba(16, 45, 90, 0.06);
+  --ink: #101b2d;
+  --ink-soft: #45577a;
+  --ink-faint: #8aa0bf;
+  --line: #17335c;
+  --accent: #2f7de1;
+  --accent-strong: #2563c7;
+  --accent-2: #7c5cfc;
+  --surface: #f5f9fe;
+  --surface-2: #e7f0fb;
+  --surface-line: rgba(16, 27, 45, 0.14);
+  --focus: #2f7de1;
+
+  --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
-/* Dark mode variables */
-.dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
+[data-theme="blueprint"] {
+  --bg: #0a1424;
+  --bg-grid: rgba(234, 242, 255, 0.06);
+  --ink: #f3f7ff;
+  --ink-soft: #a9bbd9;
+  --ink-faint: #66799c;
+  --line: #eaf2ff;
+  --accent: #4c8dff;
+  --accent-strong: #6fa4ff;
+  --accent-2: #9b8cff;
+  --surface: #101b30;
+  --surface-2: #16233b;
+  --surface-line: rgba(234, 242, 255, 0.14);
+  --focus: #4c8dff;
 }
 
-@layer base {
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
-
-  body {
-    @apply font-sans antialiased;
-    /* font: font-sans antialiased; */
-  }
-
-  /* Typography Scale */
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
-  }
-
-  h2 {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
-  }
-
-  h3 {
-    @apply text-2xl md:text-3xl font-semibold tracking-tight;
-  }
-
-  h4 {
-    @apply text-xl md:text-2xl font-semibold;
-  }
-
-  h5 {
-    @apply text-lg md:text-xl font-medium;
-  }
-
-  h6 {
-    @apply text-base md:text-lg font-medium;
-  }
-
-  p {
-    @apply text-base md:text-lg leading-relaxed;
-  }
-
-  .text-muted {
-    @apply text-gray-600 dark:text-gray-400;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-@layer components {
-  .section-padding {
-    @apply py-24 md:py-24 lg:py-24;
-  }
-
-  .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  /* Legacy support for existing card class */
-  .card {
-    @apply bg-white dark:bg-gray-800 rounded-lg text-white dark:text-gray-900 transition-colors shadow-md border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg dark:hover:shadow-xl;
-  }
-
-  /* Original button classes for backward compatibility */
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md bg-gray-900 dark:bg-gray-100 px-6 py-3 text-sm font-medium text-white dark:text-gray-900 shadow-sm transition-colors hover:bg-gray-800 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-gray-400;
-  }
-
-  .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-200 shadow-sm transition-colors hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-gray-400;
-  }
-
-  .image-container {
-    @apply w-full h-full rounded-full object-cover shadow-lg ring-4 transition-transform hover:scale-105;
-  }
-
-  .tech {
-    @apply px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-sm;
-  }
-
-  /* Animation Classes */
-  .animate-fade-in {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards;
-  }
-
-  .animate-fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
-  .animate-fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInLeft 0.8s ease-out forwards;
-  }
-
-  .animate-fade-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    animation: fadeInRight 0.8s ease-out forwards;
-  }
-
-  .animate-slide-up {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: slideUp 0.8s ease-out forwards;
-  }
-
-  .animate-slide-down {
-    transform: translateY(-10px);
-    opacity: 0;
-    animation: slideDown 0.3s ease-out forwards;
-  }
-
-  /* Animation Delays */
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  /* Keyframe Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+a {
+  color: inherit;
+}
 
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
 
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+/* Drafting label: small caps, mono, wide tracking — used for eyebrow/annotation text */
+.draft-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
 
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Dimension-line style divider: line with end-ticks, like a measured span on a drawing */
+.dim-line {
+  position: relative;
+  height: 1px;
+  background: var(--surface-line);
+}
+.dim-line::before,
+.dim-line::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background: var(--surface-line);
+}
+.dim-line::before {
+  left: 0;
+}
+.dim-line::after {
+  right: 0;
+}
 
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Registration crosshair mark, corner ornament */
+.crosshair {
+  color: var(--ink-faint);
+  opacity: 0.6;
+}
 
-  /* Scroll-based animations */
-  @media (prefers-reduced-motion: no-preference) {
-    .animate-fade-in,
-    .animate-fade-in-up,
-    .animate-fade-in-left,
-    .animate-fade-in-right,
-    .animate-slide-up {
-      animation-fill-mode: both;
-    }
-  }
+.sheet-surface {
+  background: var(--surface);
+  border: 1px solid var(--surface-line);
+}
 
-  /* Respect user's motion preferences */
-  @media (prefers-reduced-motion: reduce) {
-    .animate-fade-in,
-    .animate-fade-in-up,
-    .animate-fade-in-left,
-    .animate-fade-in-right,
-    .animate-slide-up,
-    .animate-slide-down {
-      animation: none;
-      opacity: 1;
-      transform: none;
-    }
-  }
+.ink-rule {
+  border-color: var(--surface-line);
+}
+
+/* Blue-to-violet gradient headline treatment, used sparingly on the hero */
+.gradient-text {
+  background: linear-gradient(95deg, var(--accent) 15%, var(--accent-2) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
 }
