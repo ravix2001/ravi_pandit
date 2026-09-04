@@ -15,7 +15,7 @@ export const experience: ExperienceEntry[] = [
     title: "Junior Java Developer",
     org: "Restobrain",
     location: "Darwin, Australia — Remote",
-    start: "Dec 2025",
+    start: "Nov 2025",
     end: "Present",
     summary:
       "Building and hardening the REST API layer that the product runs on, with a focus on data access performance and production stability.",
