@@ -62,9 +62,9 @@ export default function Experience() {
               <div className="text-sm" style={{ color: "var(--ink-soft)" }}>
                 {item.institution}
               </div>
-              <div className="mt-1 font-mono text-xs" style={{ color: "var(--ink-faint)" }}>
+              {/* <div className="mt-1 font-mono text-xs" style={{ color: "var(--ink-faint)" }}>
                 {item.detail}
-              </div>
+              </div> */}
             </li>
           ))}
         </ol>
