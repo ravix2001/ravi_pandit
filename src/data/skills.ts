@@ -10,7 +10,7 @@ export const skillGroups: SkillGroup[] = [
     id: "core",
     label: "Core / Language",
     note: "What the services are written in",
-    items: ["Java", " Go", "Python", "C", "C++", "JavaScript"],
+    items: ["Java", "Python", "Go", "C", "C++", "JavaScript"],
   },
   {
     id: "service",
@@ -29,11 +29,7 @@ export const skillGroups: SkillGroup[] = [
     label: "AI / LLM",
     note: "Applied AI integration and retrieval systems",
     items: [
-      "Spring AI",
-      "LLM Integration",
-      "RAG",
-      "Embeddings",
-      "AI Agents",
+      "Spring AI", "LLM Integration", "RAG", "Embeddings", "AI Agents",
     ],
   },
   {

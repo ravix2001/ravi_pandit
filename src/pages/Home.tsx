@@ -33,7 +33,7 @@ export default function Home() {
               >
                 {profile.name}, backend engineer.
                 <br />
-                <span className="gradient-text">Java &amp; Spring Boot, mostly.</span>
+                <span className="gradient-text">Java &amp; Spring Boot.</span>
               </motion.h1>
 
               <motion.p
