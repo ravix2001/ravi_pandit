@@ -23,7 +23,7 @@ export default function Home() {
           <CrosshairMarks />
           <div className="draft-label">Sheet 00 — Cover</div>
 
-          <div className="mt-4 flex flex-col-reverse gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="mt-4 flex flex-col-reverse gap-10 md:flex-row md:items-start md:justify-between">
             <div className="flex-1">
               <motion.h1
                 initial={{ opacity: 0, y: 14 }}
